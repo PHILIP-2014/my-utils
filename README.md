@@ -1,6 +1,5 @@
 # utils
 
 ``algorithm``
-  {
-    pager 
-  }
+
+a. Pager
