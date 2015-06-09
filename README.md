@@ -1,5 +1,3 @@
 # utils
 
-``algorithm``
 
-a. Pager
