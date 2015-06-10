@@ -1,3 +1,4 @@
+	/*
 	//取如teamName维度的组
 	public Map<String, List<PanDocument>> queryAllByType(PanFolderCond cond) {
 		cond.setSort("gmt_created");
@@ -44,3 +45,4 @@
 		map.put(teamName, list);
 		return map;
 	}
+*/
