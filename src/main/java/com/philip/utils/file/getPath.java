@@ -1,5 +1,5 @@
-
-	/*public List<PanFolder> getPath(Long id, List<PanFolder> path, Long uid){
+/*
+	public List<PanFolder> getPath(Long id, List<PanFolder> path, Long uid){
 
 		if(path == null){
 			path = new ArrayList<PanFolder>();

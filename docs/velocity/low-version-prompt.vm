@@ -1,0 +1,69 @@
+#set($layout="/layout/blank.vm")
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+    <meta charset="UTF-8">
+    <title>派乐</title>
+   <link rel="shortcut icon" href="#springUrl('/images/favicon.png')">
+
+   #loadCss([
+   	"/css/bootstrap/bootstrap.css",
+   	"/css/bootstrap/font-awesome.min.css",
+   	"/js/components/angular-emoji/css/emoji.css",
+   	"/js/components/angular-emoji/css/nanoscroller.css",
+   	"/css/style.css",
+   	"/js/lib/custom-scrollbar/jquery.mCustomScrollbar.min.css"
+   ],"")
+</head>
+<body  style="width:100%;height:100%;overflow:auto;">
+<div class="low-version-prompt">
+<!--div >
+    <img src="/images/low-version-prompt/paroxBaby-sorry.jpg" class="parox-baby" />
+    <div class="download-part">
+        <div class="tone">Duang!</div>
+        <p>我们目前支持以下浏览器</p>
+        <ul class="list-unstyled">
+            <li><img src="/images/low-version-prompt/chrome-browser.png" class="limiteSize" /><span>谷歌浏览器</span>
+                <a class="download-btn" href="https://www.baidu.com/link?url=Lop71i0W9djiQQrbTw-evxIl4WYw_LtUqUzCJs9TC_Mq4Ylevk4lCogR8sIT6IGdHfqGXb6OfXve7sg3tnWPE_&wd=&eqid=905c7d250001b48b00000002553f4318&ie=UTF-8">下载</a>
+            </li>
+            <li><img src="/images/low-version-prompt/firefox-browser.png" class="limiteSize" /><span>火狐浏览器</span>
+                <a class="download-btn" href="https://www.baidu.com/link?url=kYS1KPDcrl5x14fLKV4gEHHA_HwT0gsALkb7G8gqIHFEeLGwB7e6rfJo2zsLEaWIkN8jkrMtOe4M928sBgnpFa&wd=&eqid=e5eb92540001957000000002553f4390&ie=utf-8" >下载</a>
+            </li>
+        </ul>
+    </div>
+</div-->
+<div style="float:left;width:100%;">
+    <div class="download-part">
+            <div class="tone">Duang!</div>
+            <p>
+                很抱歉由于我们的技术逼格太高.<br/>
+                太任性...我们还不支持IE浏览器
+            </p>
+            <div class="expression">
+                为了您更好的体验派乐，我们推荐您使用以下浏览器<br/>
+                火狐、Chrome、safari、Opera
+            </div>
+            <ul class="list-unstyled">
+                <li><img src="/images/low-version-prompt/chrome-browser.png" class="limiteSize" /><span>谷歌浏览器</span>
+                    <a class="download-btn" href="https://www.baidu.com/link?url=Lop71i0W9djiQQrbTw-evxIl4WYw_LtUqUzCJs9TC_Mq4Ylevk4lCogR8sIT6IGdHfqGXb6OfXve7sg3tnWPE_&wd=&eqid=905c7d250001b48b00000002553f4318&ie=UTF-8">下载</a>
+                </li>
+                <li><img src="/images/low-version-prompt/firefox-browser.png" class="limiteSize" /><span>火狐浏览器</span>
+                    <a class="download-btn" href="https://www.baidu.com/link?url=kYS1KPDcrl5x14fLKV4gEHHA_HwT0gsALkb7G8gqIHFEeLGwB7e6rfJo2zsLEaWIkN8jkrMtOe4M928sBgnpFa&wd=&eqid=e5eb92540001957000000002553f4390&ie=utf-8" >下载</a>
+                </li>
+            </ul>
+
+    </div>
+    <img src="/images/low-version-prompt/paroxBaby-sorry.jpg" class="parox-baby" />
+</div>
+<div class="tip-part">
+    <h3>如果您正在使用以下浏览器，请切换至极速模式</h3>
+    <ul>
+        <li><img src="/images/low-version-prompt/360-browser.png" /><span>360浏览器</span></li>
+        <li><img src="/images/low-version-prompt/speed-browser.png" /><span>极速浏览器</span></li>
+        <li><img src="/images/low-version-prompt/cheetah-browser.png" /><span>猎豹浏览器</span></li>
+        <li><img src="/images/low-version-prompt/sougou-browser.png" /><span>搜狗浏览器</span></li>
+    </ul>
+</div>
+</div>
+</body>
+</html>
