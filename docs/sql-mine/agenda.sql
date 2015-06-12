@@ -12,7 +12,6 @@ CREATE TABLE `agenda` (
   `gmt_created` datetime DEFAULT NULL,
   `gmt_modified` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `idx_cid` (`cid`),
   KEY `idx_uid` (`uid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='用户工作日历';
 
@@ -30,11 +29,24 @@ CREATE TABLE `agenda_remember` (
   KEY `idx_uid` (`uid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='日程提醒设置';
 
+CREATE TABLE `agenda_share` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '日程共享ID',
+  `agenda_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '日历ID',
+  `uid` bigint(20) NOT NULL DEFAULT '0' COMMENT '共享者ID',
+  `target_type` int(2) NOT NULL DEFAULT '0' COMMENT '被分享者类型\n默认0：团队\n1：群组\n2：用户',
+  `target_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '被分享者ID',
+  `permission` int(2) NOT NULL DEFAULT '0' COMMENT '权限\n默认0：查看\n1：编辑',
+  `gmt_created` datetime DEFAULT NULL,
+  `gmt_modified` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `idx_agenda_id` (`agenda_id`),
+  KEY `idx_uid` (`uid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='日程共享信息';
+
 CREATE TABLE `agenda_conversation` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '日程会话ID',
-  `agenda_id` bigint(20) NOT NULL COMMENT '日程ID',
-  `uid_shared` bigint(20) NOT NULL COMMENT '谁分享到该会话',
-  `uid_target` bigint(20) DEFAULT '0' COMMENT '分享给谁',
+  `agenda_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '日程ID',
+  `uid_shared` bigint(20) NOT NULL DEFAULT '0' COMMENT '谁分享到该会话',
   `conversation_id` varchar(45) NOT NULL COMMENT '会话ID\nid_a-id_b 或者 teamId',
   `conversation_type` tinyint(4) NOT NULL COMMENT '会话类型\n0：个聊\n1：群聊',
   `uid_small` bigint(20) DEFAULT '0' COMMENT 'uid较小的',
