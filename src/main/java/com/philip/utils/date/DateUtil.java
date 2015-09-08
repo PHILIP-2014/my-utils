@@ -37,17 +37,35 @@ public class DateUtil {
 	
 	/**
 	 * 获取周一的零点
-	 * @param flag("last"表示获取上周一,其他则为本周一)
 	 * @return
 	 * @throws ParseException
 	 */
-	public static Date getFirstDayOfWeek(String flag) throws ParseException {
+	public static Date getFirstDayZeroOfWeek() throws ParseException {
 		Date thisMonday = DateUtil.getFirstDateThisWeek();
 		Date zeroMonday = DateUtil.getDate(thisMonday, "yyyy-MM-dd");
-		if(flag == "last") {
-			return DateUtil.getDateAfterDays(zeroMonday, -7);
-		}
 		return zeroMonday;
+	}
+	
+	/**
+	 * 根据指定时间获取
+	 * @param baseDate
+	 * @return
+	 */
+	public static Date getMondayFirstOfWeek(Date baseDate){
+		int dayofweek = DateUtil.getDayOfWeekForDate(baseDate);
+		dayofweek=dayofweek==1?dayofweek+7:dayofweek;
+		return DateUtil.getDateAfterDays(baseDate, 2-dayofweek);
+	}
+	
+	/**
+	 * 获取指定日期的星期序列（星期日开始）
+	 * @param day
+	 * @return
+	 */
+	public static int getDayOfWeekForDate(Date day) {
+		Calendar calendar = Calendar.getInstance(); 
+		calendar.setTime(day);
+		return calendar.get(Calendar.DAY_OF_WEEK);
 	}
 	
 	/**
