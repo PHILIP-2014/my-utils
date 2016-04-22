@@ -1,4 +1,0 @@
-<div id="global-task" px-aside-item aside-item-title="任务" class-name="global-panel" is-active="vm.itemsStatus[4].isActive">
-
-    文档
-</div>

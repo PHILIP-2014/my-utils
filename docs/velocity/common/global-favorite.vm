@@ -1,8 +1,0 @@
-<div id="global-favorite" px-aside-item aside-item-title="收藏" aside-item-header-background="#f5f5f5" is-active="vm.globalStatus.globalFavorite">
-    <div class="px-panel" ng-controller="FavoriteController">
-
-        <favorite-list>
-            <favorite-item ng-repeat="favorite in favorites track by favorite.id"></favorite-item>
-        </favorite-list>
-    </div>
-</div>

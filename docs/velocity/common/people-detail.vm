@@ -1,7 +1,0 @@
-<div id="people-detail" px-aside-item aside-item-title="个人文档" accordion-subtitle="files.length" is-active="vm.partStatus.peopleDetail" >
-    <div px-infinite on-infinite="onInfinite()" class="px-pages">
-        <file-list>
-            <file-item ng-repeat="file in files track by file.id"></file-item>
-        </file-list>
-    </div>
-</div>
