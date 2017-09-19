@@ -82,13 +82,7 @@
 		    <artifactId>spring-context-support</artifactId>
 		    <version>${spring.version}</version>
 		</dependency>
-		
-		<dependency>
-			<groupId>com.sohu.sendcloud</groupId>
-			<artifactId>sendcloud-sdk</artifactId>
-			<version>1.0.7</version>
-		</dependency>
-		
+
 		<dependency>
 			<groupId>com.sun.mail</groupId>
 			<artifactId>javax.mail</artifactId>
